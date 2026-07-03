@@ -12,6 +12,8 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/muhammad-ahmed-imtiaz-68332b282",
   resumeUrl: "/Muhammad_Ahmed_Imtiaz_Resume.pdf",
   cvUrl: "/Muhammad_Ahmed_Imtiaz_CV.pdf",
+  /** Web3Forms public access key — safe to expose; it can only deliver mail to the owner. */
+  web3formsKey: "bc18a6da-9628-4195-b6e8-85cfb7e99b81",
 };
 
 export const stats = [
