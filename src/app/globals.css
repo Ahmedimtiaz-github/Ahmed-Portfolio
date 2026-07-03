@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  /* Dark navy palette */
+  --color-base: #050a16;
+  --color-surface: #0b1428;
+  --color-surface-2: #101d3a;
+  --color-edge: #1c2c52;
+  --color-edge-bright: #2b4178;
+  --color-ink: #e6ecf8;
+  --color-ink-dim: #94a3c4;
+  --color-ink-faint: #5c6b91;
+  --color-accent: #4f8ef7;
+  --color-accent-bright: #7cc0ff;
+  --color-accent-deep: #1e3a8a;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-base);
+  color: var(--color-ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #ffffff;
+}
+
+/* Subtle radial glow used behind the hero */
+.hero-glow {
+  background:
+    radial-gradient(600px circle at 20% 20%, rgba(79, 142, 247, 0.14), transparent 60%),
+    radial-gradient(800px circle at 80% 60%, rgba(30, 58, 138, 0.25), transparent 65%);
+}
+
+/* Fade the edges of the skills marquee */
+.marquee-mask {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent
+  );
+}
