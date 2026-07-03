@@ -16,7 +16,7 @@ export default function Hero() {
 
           <h1 className="mt-6 text-4xl sm:text-6xl font-bold tracking-tight leading-tight">
             {profile.name.split(" ").slice(0, -1).join(" ")}{" "}
-            <span className="bg-gradient-to-r from-accent to-accent-bright bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-accent via-accent-bright to-violet-bright bg-clip-text text-transparent">
               {profile.name.split(" ").slice(-1)}
             </span>
           </h1>
@@ -56,7 +56,7 @@ export default function Hero() {
         </div>
 
         <div className="relative mx-auto w-64 sm:w-80 lg:w-full lg:max-w-sm">
-          <div className="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-accent-deep via-accent/40 to-accent-bright/30 blur-xl opacity-60" />
+          <div className="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-accent-deep via-accent/40 to-violet/30 blur-xl opacity-60" />
           <div className="relative overflow-hidden rounded-3xl border border-edge-bright">
             <Image
               src="/profile.jpg"
