@@ -6,15 +6,13 @@ export default function Hero() {
     <section id="home" className="hero-glow relative pt-32 pb-20 sm:pt-40 sm:pb-24">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-[1.4fr_1fr]">
         <div>
-          {profile.openToWork && (
-            <span className="inline-flex items-center gap-2 rounded-full border border-edge bg-surface px-3.5 py-1.5 text-xs font-medium text-ink-dim">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
-              </span>
-              Open to junior AI/ML roles
+          <span className="inline-flex items-center gap-2 rounded-full border border-edge bg-surface px-3.5 py-1.5 text-xs font-medium text-ink-dim">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
             </span>
-          )}
+            {profile.availability}
+          </span>
 
           <h1 className="mt-6 text-4xl sm:text-6xl font-bold tracking-tight leading-tight">
             {profile.name.split(" ").slice(0, -1).join(" ")}{" "}

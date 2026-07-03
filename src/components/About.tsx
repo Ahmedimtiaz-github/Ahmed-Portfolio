@@ -1,9 +1,10 @@
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
-import { about, education } from "@/data/profile";
+import { about, education, experience } from "@/data/profile";
 
 export default function About() {
-  const currentDegree = education[0];
+  const currentRole = experience[0];
+  const degree = education[0];
 
   return (
     <section id="about" className="scroll-mt-24 py-20">
@@ -26,15 +27,18 @@ export default function About() {
               <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">
                 Currently
               </p>
-              <p className="mt-3 font-semibold">{currentDegree.degree}</p>
-              <p className="mt-1 text-sm text-ink-dim">{currentDegree.institution}</p>
+              <p className="mt-3 font-semibold">{currentRole.role}</p>
+              <p className="mt-1 text-sm text-ink-dim">{currentRole.company}</p>
               <p className="mt-1 font-mono text-sm text-accent-bright">
-                {currentDegree.period}
+                {currentRole.period}
               </p>
               <hr className="my-5 border-edge" />
-              <p className="text-sm leading-relaxed text-ink-dim">
-                Focused on LLM/RAG systems, voice AI and shipping models behind clean,
-                documented APIs.
+              <p className="font-mono text-xs uppercase tracking-widest text-ink-faint">
+                Education
+              </p>
+              <p className="mt-3 text-sm font-medium">{degree.degree}</p>
+              <p className="mt-1 text-sm text-ink-dim">
+                NUML, Islamabad — graduated Jan 2026
               </p>
             </div>
           </Reveal>

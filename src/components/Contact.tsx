@@ -1,3 +1,4 @@
+import GetInTouch from "@/components/GetInTouch";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import { profile } from "@/data/profile";
@@ -33,7 +34,7 @@ export default function Contact() {
           <SectionHeading
             eyebrow="06 · Contact"
             title="Let's build something"
-            description={`Based in ${profile.location} · open to junior AI/ML roles, on-site or remote.`}
+            description={`Based in ${profile.location} · always open to interesting AI/ML problems and collaborations.`}
           />
         </Reveal>
 
@@ -60,15 +61,8 @@ export default function Contact() {
           ))}
         </div>
 
-        <Reveal delay={300} className="mt-14 text-center">
-          <a
-            href={`mailto:${profile.email}?subject=Opportunity%20for%20${encodeURIComponent(
-              profile.name
-            )}`}
-            className="inline-block rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-accent/25 hover:bg-accent-bright hover:text-base transition-colors"
-          >
-            Say hello → {profile.email}
-          </a>
+        <Reveal delay={300} className="mt-14">
+          <GetInTouch />
         </Reveal>
       </div>
     </section>
