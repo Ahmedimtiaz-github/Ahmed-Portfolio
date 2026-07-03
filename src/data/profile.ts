@@ -1,9 +1,10 @@
 export const profile = {
   name: "Muhammad Ahmed Imtiaz",
-  role: "AI/ML Engineer",
+  role: "Full Stack AI/ML Engineer",
   tagline: "Train. Ship. Iterate.",
   headline:
     "I build machine learning systems end-to-end — from fine-tuned models and RAG pipelines to the FastAPI microservices, Kafka streams and dashboards that put them in production.",
+  availability: "Full Stack AI/ML Engineer @ Neuronix Technologies",
   location: "Islamabad, Pakistan",
   email: "ahmedimtqureshi@gmail.com",
   phone: "+92 336 5014829",
@@ -11,7 +12,6 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/muhammad-ahmed-imtiaz-68332b282",
   resumeUrl: "/Muhammad_Ahmed_Imtiaz_Resume.pdf",
   cvUrl: "/Muhammad_Ahmed_Imtiaz_CV.pdf",
-  openToWork: true,
 };
 
 export const stats = [
@@ -22,8 +22,8 @@ export const stats = [
 
 export const about = {
   paragraphs: [
-    "I'm a final-year BS Artificial Intelligence student at NUML Islamabad (2022 – 2026) working as an AI/ML engineer across internships, a mentor-led deep learning fellowship, and my own projects. My focus is applied ML that actually ships: RAG and agentic pipelines, voice AI, computer vision, and graph models — wrapped in clean APIs and deployed with Docker.",
-    "Recently I built a multi-tenant biometric identity verification platform at Neuronix Technologies — face matching, liveness detection, OCR and fingerprint matching as independent FastAPI microservices, wired together with Apache Kafka, Go services and a Next.js dashboard, all containerized as a 13-service stack.",
+    "I'm a Full Stack AI/ML Engineer at Neuronix Technologies and a BS Artificial Intelligence graduate from NUML Islamabad (Jan 2026). I got here through internships, a mentor-led deep learning fellowship and my own projects — and my focus has stayed the same throughout: applied ML that actually ships. RAG and agentic pipelines, voice AI, computer vision and graph models, wrapped in clean APIs and deployed with Docker.",
+    "At Neuronix I built a multi-tenant biometric identity verification platform — face matching, liveness detection, OCR and fingerprint matching as independent FastAPI microservices, wired together with Apache Kafka, Go services and a Next.js dashboard, all containerized as a 13-service stack.",
     "I care about reproducibility and evaluation as much as the model itself: experiment tracking, honest metrics (AUC/F1), and repos anyone can clone and run.",
   ],
 };
@@ -115,7 +115,7 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    role: "AI/ML Intern",
+    role: "Full Stack AI/ML Engineer",
     company: "Neuronix Technologies",
     period: "Mar 2026 – Present",
     bullets: [
@@ -255,7 +255,8 @@ export const education: Education[] = [
     degree: "BS in Artificial Intelligence",
     institution: "National University of Modern Languages (NUML), Islamabad",
     period: "2022 – 2026",
-    detail: "Coursework and projects across deep learning, NLP, computer vision and data engineering.",
+    detail:
+      "Graduated January 2026. Coursework and projects across deep learning, NLP, computer vision and data engineering.",
   },
   {
     degree: "FSc (Pre-Engineering)",
