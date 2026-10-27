@@ -1,17 +1,16 @@
 export const profile = {
   name: "Muhammad Ahmed Imtiaz",
-  role: "Full Stack AI/ML Engineer",
+  role: "AI/ML Engineer",
   tagline: "Train. Ship. Iterate.",
   headline:
-    "I build machine learning systems end-to-end — from fine-tuned models and RAG pipelines to the FastAPI microservices, Kafka streams and dashboards that put them in production.",
-  availability: "Full Stack AI/ML Engineer @ Neuronix Technologies",
+    "I build production AI systems end-to-end — from biometric models for face, liveness, OCR and fingerprint verification to the FastAPI microservices, Kafka pipelines and secure APIs that put them in production.",
+  availability: "AI/ML Engineer @ Neuronix Technologies",
   location: "Islamabad, Pakistan",
   email: "ahmedimtqureshi@gmail.com",
   phone: "+92 336 5014829",
   github: "https://github.com/Ahmedimtiaz-github",
   linkedin: "https://www.linkedin.com/in/muhammad-ahmed-imtiaz-68332b282",
-  resumeUrl: "/Muhammad_Ahmed_Imtiaz_Resume.pdf",
-  cvUrl: "/Muhammad_Ahmed_Imtiaz_CV.pdf",
+  resumeUrl: "/Muhammad_Ahmed_Imtiaz_R.pdf",
   /** Web3Forms public access key — safe to expose; it can only deliver mail to the owner. */
   web3formsKey: "bc18a6da-9628-4195-b6e8-85cfb7e99b81",
 };
@@ -24,9 +23,9 @@ export const stats = [
 
 export const about = {
   paragraphs: [
-    "I'm a Full Stack AI/ML Engineer at Neuronix Technologies and a BS Artificial Intelligence graduate from NUML Islamabad (Jan 2026). I got here through internships, a mentor-led deep learning fellowship and my own projects — and my focus has stayed the same throughout: applied ML that actually ships. RAG and agentic pipelines, voice AI, computer vision and graph models, wrapped in clean APIs and deployed with Docker.",
-    "At Neuronix I built a multi-tenant biometric identity verification platform — face matching, liveness detection, OCR and fingerprint matching as independent FastAPI microservices, wired together with Apache Kafka, Go services and a Next.js dashboard, all containerized as a 13-service stack.",
-    "I care about reproducibility and evaluation as much as the model itself: experiment tracking, honest metrics (AUC/F1), and repos anyone can clone and run.",
+    "I'm an AI/ML Engineer at Neuronix Technologies and a BS Artificial Intelligence graduate from NUML Islamabad. I got here through internships, a mentor-led deep learning fellowship and my own projects — and my focus has stayed the same throughout: applied ML that actually ships. Before biometrics I built voice AI agents, graph-based recommenders and RAG pipelines.",
+    "At Neuronix I'm a core engineer on a multi-tenant KYC platform — face matching, liveness detection, OCR and fingerprint recognition as Python/FastAPI microservices, with Go backends, Kafka event pipelines, PostgreSQL and Redis. I also designed its security layer: Ed25519-signed tokens, hierarchical RBAC, per-tenant API keys and HMAC-signed webhooks.",
+    "I care about evaluation as much as the model itself: honest metrics (FAR/FRR/EER, AUC/F1), tracing failures to their root cause, and systems anyone can deploy and run.",
   ],
 };
 
@@ -49,9 +48,22 @@ export const skillGroups: SkillGroup[] = [
       "OpenCV",
       "InsightFace",
       "PaddleOCR",
+      "Fine-tuning & LoRA",
       "Rasa",
-      "STT/TTS (Whisper, Vosk, Coqui)",
-      "Model evaluation (AUC / F1)",
+      "STT/TTS (whisper.cpp, Vosk, Coqui/Piper)",
+      "Model evaluation (AUC / F1, FAR / FRR / EER)",
+    ],
+  },
+  {
+    title: "Biometrics & Vision",
+    skills: [
+      "Face matching (InsightFace)",
+      "Liveness detection (ViT)",
+      "Fingerprint recognition (DeepPrint)",
+      "Contactless fingerprint R&D",
+      "Image enhancement (CLAHE, ridge analysis)",
+      "Image quality gates",
+      "OCR (PaddleOCR)",
     ],
   },
   {
@@ -61,23 +73,31 @@ export const skillGroups: SkillGroup[] = [
       "Flask",
       "Go (Gin, GORM)",
       "REST API design",
+      "OpenAPI / Swagger",
       "Microservices",
       "Apache Kafka",
       "PostgreSQL",
+      "Redis",
       "MySQL",
       "Docker",
       "Docker Compose",
-      "JWT auth",
+      "Auth & RBAC (Ed25519, API keys, JWT)",
+      "Webhooks (HMAC signing)",
+      "API gateway (Apache APISIX)",
+      "Linux / Bash",
     ],
   },
   {
-    title: "Languages & Frontend",
-    skills: ["Python", "SQL", "Go", "C++", "Java", "Next.js", "React"],
-  },
-  {
-    title: "Tooling & Workflow",
+    title: "Languages, Frontend & Tooling",
     skills: [
-      "Git / GitHub",
+      "Python",
+      "Go",
+      "SQL",
+      "C++",
+      "Java",
+      "Next.js",
+      "React",
+      "Git / GitHub / Bitbucket",
       "n8n",
       "Experiment tracking",
       "Reproducible notebooks",
@@ -102,9 +122,12 @@ export const marqueeSkills = [
   "Go",
   "Kafka",
   "PostgreSQL",
+  "Redis",
   "Docker",
   "Next.js",
   "OpenCV",
+  "InsightFace",
+  "LoRA",
 ];
 
 export type Experience = {
@@ -117,14 +140,26 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    role: "Full Stack AI/ML Engineer",
+    role: "AI/ML Engineer",
     company: "Neuronix Technologies",
-    period: "Mar 2026 – Present",
+    period: "Sep 2026 – Present",
     bullets: [
-      "Built a production-ready multi-tenant biometric identity verification platform — face matching (InsightFace), liveness detection (FSFM ViT-B16), OCR (PaddleOCR) and fingerprint matching (DeepPrint) as independent FastAPI microservices.",
-      "Designed an event-driven pipeline with Apache Kafka for async result streaming; a Go consumer persists structured results to PostgreSQL behind a Go/Gin admin backend and Next.js dashboard.",
-      "Developed a Go data-acquisition service and a Next.js customer portal coordinating parallel AI service calls with a full audit trail.",
-      "Containerized and deployed the full 13-service stack with Docker Compose on a Linux VM, resolving Kafka networking, model memory and orchestration issues.",
+      "Core AI/ML engineer for KYC on a multi-tenant identity verification platform (KYC, KYB, transaction screening) serving external integrators via public REST APIs.",
+      "Designed the platform's security layer: a shared Go auth library with Ed25519-signed tokens and Redis-backed sessions (instant revocation), hierarchical RBAC, per-tenant hashed API keys with rate limiting, and APISIX gateway hardening.",
+      "Built a signed webhook system (HMAC-SHA256, transactional outbox, retries with backoff) and an async verification API with idempotent request IDs, a leased job queue and an OpenAPI 3.1 spec.",
+      "Fixed a fingerprint false-accept issue — traced it to a scanner-trained model (DeepPrint) applied to phone images, unified decision thresholds, and added an image validation gate (blur, ridge-pattern checks) and enhancement pipeline (CLAHE, scale normalisation).",
+      "Led R&D on contactless fingerprint recognition: evaluated models (Ridgeformer, C2CL) and datasets (RidgeBase, ISPFD, HKPolyU, synthetic IMPOSE) for licensing and fine-tuning strategy (partial fine-tuning, LoRA).",
+    ],
+    tech: ["Python", "Go", "Redis", "PostgreSQL", "APISIX", "OpenAPI", "DeepPrint", "LoRA"],
+  },
+  {
+    role: "AI/ML Intern",
+    company: "Neuronix Technologies",
+    period: "Mar 2026 – Aug 2026",
+    bullets: [
+      "Built the core biometric verification services as Python/FastAPI microservices: face matching (InsightFace), liveness detection (ViT), OCR (PaddleOCR) and fingerprint matching (DeepPrint).",
+      "Designed an event-driven pipeline with Apache Kafka: a Go data-acquisition service calling AI services in parallel, a Go consumer persisting results to PostgreSQL, and a Go/Gin backend serving Next.js admin and client portals.",
+      "Containerized and deployed the full stack with Docker Compose on Linux, resolving production issues in Kafka networking, model memory limits and service orchestration.",
     ],
     tech: ["FastAPI", "Go", "Kafka", "PostgreSQL", "Docker", "Next.js", "InsightFace", "PaddleOCR"],
   },
@@ -133,10 +168,9 @@ export const experience: Experience[] = [
     company: "Codecelix (NASTP)",
     period: "Nov 2025 – Feb 2026",
     bullets: [
-      "Led prototyping and delivery of applied ML features while coordinating technical tasks across the intern team.",
-      "Voice Customer Support Agent — built components of a low-latency voice pipeline (STT → LLM → TTS) on fully open-source stacks.",
-      "EchoSee — implemented sound-event detection, 360° directional audio awareness and an experimental real-time lip-reading captioning prototype.",
-      "Documented architecture, tool selection and evaluation metrics; delivered runnable prototypes and demo videos.",
+      "Team lead for applied ML prototypes built with open-source tools.",
+      "Voice Customer Support Agent — built a low-latency voice-to-voice pipeline (speech → text → LLM response → speech) with open-source STT, LLM and TTS, in a modular design.",
+      "EchoSee — developed AI accessibility and safety features: sound-event detection, 360° directional audio awareness and a real-time lip-reading prototype for captions.",
     ],
     tech: ["Python", "Whisper", "TTS", "YAMNet", "FastAPI"],
   },
@@ -145,10 +179,9 @@ export const experience: Experience[] = [
     company: "Dam Techhub",
     period: "Jul 2025 – Aug 2025",
     bullets: [
-      "Cleaned and preprocessed the Amazon co-purchase graph and engineered node features for model training.",
-      "Trained Node2Vec embeddings and a GraphSAGE link-prediction model reaching 0.845 – 0.848 AUC on validation/test.",
-      "Shipped a production-capable FastAPI /recommend endpoint with JWT protection and ASIN mapping for frontend consumption.",
-      "Delivered reproducible artifacts: node features, edge indices, model checkpoints and inference scripts.",
+      "Built a graph-based product recommender on the Amazon co-purchase graph: Node2Vec embeddings and a GraphSAGE link-prediction model (AUC ≈ 0.85 on validation/test).",
+      "Mapped internal node IDs to real Amazon ASINs for frontend use.",
+      "Served recommendations through a FastAPI /recommend endpoint with JWT authentication and environment-based configuration.",
     ],
     tech: ["PyTorch Geometric", "Node2Vec", "GraphSAGE", "FastAPI", "JWT"],
   },
@@ -199,7 +232,7 @@ export const projects: Project[] = [
   {
     title: "Feedback Flow — Final Year Project",
     description:
-      "Sentiment analytics platform: fine-tuned BERT on Uber reviews, a Rasa chatbot answering university transport queries from a MySQL database, and a FastAPI proxy connecting a Flutter app end-to-end.",
+      "Sentiment analytics platform: fine-tuned BERT on Uber reviews served to a Flutter app through Flask APIs, plus a Rasa chatbot answering NUML transport queries from MySQL behind an API-key-protected FastAPI proxy, with in-app analytics visualisations.",
     tech: ["BERT", "Rasa", "Flask", "FastAPI", "MySQL", "Flutter"],
     github: "https://github.com/Ahmedimtiaz-github/MODEL_FYP.ipynb",
     featured: true,
@@ -222,7 +255,7 @@ export const projects: Project[] = [
   {
     title: "WhatsApp Automation for Restaurants",
     description:
-      "n8n workflow automation using the Gemini API and Google Sheets — context-aware order intake with simple memory, templated confirmations and status updates over WhatsApp.",
+      "End-to-end WhatsApp ordering workflow in n8n, using the Gemini API as the LLM and Google Sheets as the datastore — an AI agent with conversation memory handles order intake, confirmations and status updates.",
     tech: ["n8n", "Gemini API", "Google Sheets", "Automation"],
     featured: false,
   },
@@ -258,7 +291,7 @@ export const education: Education[] = [
     institution: "National University of Modern Languages (NUML), Islamabad",
     period: "2022 – 2026",
     detail:
-      "Graduated January 2026. Coursework and projects across deep learning, NLP, computer vision and data engineering.",
+      "Coursework and projects across deep learning, NLP, computer vision and data engineering.",
   },
   {
     degree: "FSc (Pre-Engineering)",

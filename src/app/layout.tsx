@@ -21,6 +21,8 @@ export const metadata: Metadata = {
     "ML Engineer",
     "Machine Learning",
     "Deep Learning",
+    "Biometrics",
+    "Computer Vision",
     "RAG",
     "FastAPI",
     "Muhammad Ahmed Imtiaz",
