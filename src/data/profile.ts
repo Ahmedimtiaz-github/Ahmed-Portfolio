@@ -23,7 +23,7 @@ export const stats = [
 
 export const about = {
   paragraphs: [
-    "I'm an AI/ML Engineer at Neuronix Technologies and a BS Artificial Intelligence graduate from NUML Islamabad. I got here through internships, a mentor-led deep learning fellowship and my own projects — and my focus has stayed the same throughout: applied ML that actually ships. Before biometrics I built voice AI agents, graph-based recommenders and RAG pipelines.",
+    "I'm an AI/ML Engineer at Neuronix Technologies and a BS Artificial Intelligence graduate from NUML Islamabad (Jan 2026). I got here through internships, a mentor-led deep learning fellowship and my own projects — and my focus has stayed the same throughout: applied ML that actually ships. Before biometrics I built voice AI agents, graph-based recommenders and RAG pipelines.",
     "At Neuronix I'm a core engineer on a multi-tenant KYC platform — face matching, liveness detection, OCR and fingerprint recognition as Python/FastAPI microservices, with Go backends, Kafka event pipelines, PostgreSQL and Redis. I also designed its security layer: Ed25519-signed tokens, hierarchical RBAC, per-tenant API keys and HMAC-signed webhooks.",
     "I care about evaluation as much as the model itself: honest metrics (FAR/FRR/EER, AUC/F1), tracing failures to their root cause, and systems anyone can deploy and run.",
   ],
@@ -291,7 +291,7 @@ export const education: Education[] = [
     institution: "National University of Modern Languages (NUML), Islamabad",
     period: "2022 – 2026",
     detail:
-      "Coursework and projects across deep learning, NLP, computer vision and data engineering.",
+      "Graduated January 2026. Coursework and projects across deep learning, NLP, computer vision and data engineering.",
   },
   {
     degree: "FSc (Pre-Engineering)",
