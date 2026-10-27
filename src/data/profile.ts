@@ -17,9 +17,7 @@ export const profile = {
 
 export const stats = [
   { value: "10+", label: "Projects shipped" },
-  { value: "4", label: "Industry roles" },
-  { value: "13", label: "Services in one deployed stack" },
-];
+  { value: "4", label: "Industry roles" },];
 
 export const about = {
   paragraphs: [

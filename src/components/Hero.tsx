@@ -44,7 +44,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <dl className="mt-12 grid max-w-md grid-cols-3 gap-6">
+          <dl className="mt-12 grid max-w-xs grid-cols-2 gap-6">
             {stats.map((stat) => (
               <div key={stat.label}>
                 <dt className="sr-only">{stat.label}</dt>
